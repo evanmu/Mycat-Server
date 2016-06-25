@@ -12,16 +12,17 @@
 
 	<properties>
 		<app.encoding>UTF-8</app.encoding>
-		<!-- maven.build.timestamp.format>yyyyMMdd</maven.build.timestamp.format> 
-			<buildNumber>${maven.build.timestamp}</buildNumber      -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.build.timestamp.format>yyyyMMdd</maven.build.timestamp.format>
+		<buildNumber>${maven.build.timestamp}</buildNumber>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<version.template.file>version.txt.template</version.template.file>
 		<version.file>version.txt</version.file>
 	</properties>
 	<scm>
-		<connection>scm:git:ssh://apachemycat@github.com/MyCATApache/Mycat-Server.git</connection>
-		<developerConnection>scm:git:ssh://apachemycat@github.com/MyCATApache/Mycat-Server.git</developerConnection>
-		<url>scm:git:ssh://apachemycat@github.com/MyCATApache/Mycat-Server.git</url>
+		<connection>scm:git:ssh://evanmu@github.com:evanmu/Mycat-Server.git</connection>
+		<developerConnection>scm:git:ssh://evanmu@github.com:evanmu/Mycat-Server.git</developerConnection>
+		<url>scm:git:ssh://evanmu@github.com:evanmu/Mycat-Server.git</url>
 	</scm>
 	<repositories>
 		<repository>
@@ -93,37 +94,37 @@
 			<version>4.4</version>
 			<scope>provided</scope>
 		</dependency>
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity</artifactId>
-            <version>1.7</version>
-        </dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jsr166-mirror</groupId>
 			<artifactId>jsr166y</artifactId>
 			<version>1.7.0</version>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
-            <groupId>com.lmax</groupId>
-            <artifactId>disruptor</artifactId>
-            <version>3.3.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-1.2-api</artifactId>
-            <version>2.5</version>
-        </dependency>
+		<dependency>
+			<groupId>com.lmax</groupId>
+			<artifactId>disruptor</artifactId>
+			<version>3.3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-1.2-api</artifactId>
+			<version>2.5</version>
+		</dependency>
 		<dependency>
 			<groupId>com.univocity</groupId>
 			<artifactId>univocity-parsers</artifactId>
@@ -168,12 +169,12 @@
 			<artifactId>curator-test</artifactId>
 			<version>2.10.0</version>
 			<scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-            </exclusions>
+			<exclusions>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.yaml</groupId>
@@ -186,7 +187,7 @@
 			<version>1.2.12</version>
 		</dependency>
 		<!-- joda日期处理工具 -->
-        <dependency>
+		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
 			<version>2.9.3</version>
