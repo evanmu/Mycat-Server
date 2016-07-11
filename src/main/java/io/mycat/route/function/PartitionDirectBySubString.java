@@ -45,7 +45,12 @@ public class PartitionDirectBySubString extends AbstractPartitionAlgorithm imple
     @Override
     public Integer calculate(String columnValue) {
         String partitionSubString = columnValue.substring(startIndex, startIndex + size);
-        int partition = Integer.parseInt(partitionSubString, 10);
+        Integer partition = null;
+        try {
+            partition = Integer.parseInt(partitionSubString, 10);
+        } catch (NumberFormatException e) {
+            partition = defaultPartition;
+        }
         return partitionCount > 0 && partition >= partitionCount
                 ? defaultPartition : partition;
     }

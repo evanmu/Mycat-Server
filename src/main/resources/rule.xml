@@ -73,6 +73,20 @@
 			<algorithm>jump-consistent-hash</algorithm>
 		</rule>
 	</tableRule>
+	
+	<tableRule name="sharding-idtfno">
+		<rule>
+			<columns>idtfno</columns>
+			<algorithm>mod-cert</algorithm>
+		</rule>
+	</tableRule>
+	
+    <function name="mod-cert" class="io.mycat.route.function.PartitionDirectBySubString">
+		<property name="startIndex">17</property>
+		<property name="size">1</property>
+		<property name="partitionCount">11</property>
+		<property name="defaultPartition">10</property>
+	</function>
 
 	<function name="murmur"
 		class="io.mycat.route.function.PartitionByMurmurHash">

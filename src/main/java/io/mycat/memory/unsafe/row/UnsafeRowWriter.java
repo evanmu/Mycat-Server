@@ -167,7 +167,8 @@ public class UnsafeRowWriter {
   }
 
   public void write(int ordinal, byte[] input) {
-    write(ordinal, input, 0, input.length);
+    int length = null == input ? 0 :input.length;
+    write(ordinal, input, 0, length);
   }
 
   public void write(int ordinal, byte[] input, int offset, int numBytes) {
